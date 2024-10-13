@@ -31,5 +31,5 @@ cat nifi-app.log.save | grep "Generated"
 
 --- Stop the Nifi
 
-nifi.sh stop
+./nifi.sh stop
 
