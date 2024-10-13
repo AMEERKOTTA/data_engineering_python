@@ -1,0 +1,35 @@
+--- Install and Configure Java 3.8 or more
+---Check Java version
+java -version 
+
+--- Install the Stable Version of Nifi from Apache Website
+Website : https://www.apache.org/dyn/closer.lua?path=/nifi/1.27.0/nifi-1.27.0-bin.zip
+Download Link : https://dlcdn.apache.org/nifi/1.27.0/nifi-1.27.0-bin.zip
+
+wget https://dlcdn.apache.org/nifi/1.27.0/nifi-1.27.0-bin.zip
+
+---unzip the files
+
+unzip nifi-1.27.0-bin.zip
+
+--- navigate to the bin folder
+cd nifi-1.27.0/bin
+
+--- start the nifi
+./nifi.sh start
+
+--- check the nifi status
+./nifi.sh status
+
+Then go to the url https://127.0.0.1:8443/nifi/
+It will ask for the username and password
+
+--- get the username and password using the below command
+First navigate to the log file in nifi
+
+cat nifi-app.log.save | grep "Generated"
+
+--- Stop the Nifi
+
+nifi.sh stop
+
