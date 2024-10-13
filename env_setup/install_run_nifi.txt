@@ -5,11 +5,9 @@ java -version
 --- Install the Stable Version of Nifi from Apache Website
 Website : https://www.apache.org/dyn/closer.lua?path=/nifi/1.27.0/nifi-1.27.0-bin.zip
 Download Link : https://dlcdn.apache.org/nifi/1.27.0/nifi-1.27.0-bin.zip
-
 wget https://dlcdn.apache.org/nifi/1.27.0/nifi-1.27.0-bin.zip
 
 ---unzip the files
-
 unzip nifi-1.27.0-bin.zip
 
 --- navigate to the bin folder
@@ -30,6 +28,5 @@ First navigate to the log file in nifi
 cat nifi-app.log.save | grep "Generated"
 
 --- Stop the Nifi
-
 ./nifi.sh stop
 
