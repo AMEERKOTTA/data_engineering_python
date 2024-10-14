@@ -1,0 +1,18 @@
+Install and Configure Kibana
+
+--- Get the Same Version as Elasticsearch
+wget https://artifacts.elastic.co/downloads/kibana/kibana-7.6.0-linux-x86_64.tar.gz
+
+--- unzip the gz file
+tar -xzf kibana-7.6.0-linux-x86_64.tar.gz
+
+--- start the kibana
+Navigate to the kibana directory
+then bin
+run the below command
+cd kibana
+cd bin
+./kibana
+
+--- Check the Web Portal
+http://localhost:5601

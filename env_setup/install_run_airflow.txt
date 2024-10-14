@@ -1,0 +1,63 @@
+Apache Airflow Installation and Setup
+
+--- Check the Python Version 
+
+python3 --version
+
+--- Create and Activate the Virtual Environment for the Apache Airflow
+source 
+python3 -m venv airflow_venv
+source airflow_venv/bin/activate
+
+
+--- Install Software Dependencies
+sudo apt-get install software-properties-common
+sudo apt-add-repository universe
+sudo apt-get update
+sudo apt-get install python-setuptools
+sudo apt install python3-pip
+python3 -m pip install --upgrade pip
+
+
+--- Install Airflow Linux Dependencies
+sudo apt-get install libmysqlclient-dev
+sudo apt-get install libssl-dev
+sudo apt-get install libkrb5-dev
+
+
+--- Install Airflow
+mkdir ~/airflow
+export AIRFLOW_HOME=~/airflow
+pip install apache-airflow
+pip install typing extensions
+
+--- Create Users in Airflow
+airflow users create --username admin --firstname ameer --lastname kotta --role Admin --email kottaameer@gmail.com
+
+--- List the users names
+airflow users list
+
+--- Start the Apache Airflow db
+airflow db init
+
+--- Start the web server
+airflow webserver -p 8080
+airflow webserver -p 8080 --daemon
+
+--- Start the Scheduler
+airflow scheduler --daemon
+
+--- Check the Local Host
+https://172.0.0.1/8080
+
+--- Check the Airflow dags list
+airflow dags list
+
+
+Airflow Credentials
+username = admin
+password = ameerkotta
+
+
+
+

@@ -1,0 +1,22 @@
+Install and Configure Elasticsearch on Ubuntu
+
+--- Update the Packages
+sudo apt update
+sudo apt install apt-transport-https ca-certificates curl gnupg
+
+--- Install Java 8 or more
+sudo apt install openjdk-11-jdk
+java -version
+
+---check the java path
+echo $JAVA_HOME
+
+
+---Run the Elastic Search Instance
+./bin/elasticsearch
+curl -X GET "localhost:9200/"
+
+--- Check the Status on Google Chrome
+http://localhost:9200
+
+

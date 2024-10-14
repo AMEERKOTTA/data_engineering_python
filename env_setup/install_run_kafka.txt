@@ -1,0 +1,47 @@
+--- Check the Ubuntu version : lsb_release -a 
+--- Update Package List : sudo apt update
+
+
+--- Installing Java 11 JDK
+
+wget -O- https://apt.corretto.aws/corretto.key | sudo apt-key add - 
+sudo add-apt-repository 'deb https://apt.corretto.aws stable main'
+sudo apt-get update; sudo apt-get install -y java-11-amazon-corretto-jdk
+
+
+--- Download and Install Kafka
+
+wget https://downloads.apache.org/kafka/3.8.0/kafka_2.13-3.8.0.tgz
+
+--- Extract the Files
+
+tar xzf kafka_2.13-3.0.0.tgz
+
+
+--- Start the ZooKeeper 
+
+navigate to the bin directory 
+
+cd kafka_2.13-3.8.0/bin
+./zookeeper-server-start.sh ../config/zookeeper.properties
+
+--- Start the Kafka Broker
+
+navigate to the bin directory 
+
+cd kafka_2.13-3.8.0/bin
+./kafka-server-start.sh ../config/server.properties
+
+
+./kafka-topics.sh --create --topic my-first-topic --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+
+./kafka-topics.sh --list --bootstrap-server localhost:9092
+
+./kafka-console-producer.sh --topic my-first-topic --bootstrap-server localhost:9092
+
+./kafka-console-consumer.sh --topic my-first-topic --from-beginning --bootstrap-server localhost:9092
+
+
+
+
+
