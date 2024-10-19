@@ -7,4 +7,5 @@
 + Install and Configure PostgreSQL 
 + Install and Configure PgAdmin 
 + Install and Configure Elasticsearch 
-+ Install and Configure Kibana 
++ Install and Configure Kibana
++ Install and Configure Dbeaver 
