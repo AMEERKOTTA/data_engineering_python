@@ -9,3 +9,4 @@
 + Install and Configure Elasticsearch 
 + Install and Configure Kibana
 + Install and Configure Dbeaver 
+
