@@ -11,5 +11,3 @@
 + Install and Configure Dbeaver 
 
 ## Reading and Writing Data
-
-
